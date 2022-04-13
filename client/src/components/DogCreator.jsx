@@ -57,7 +57,7 @@ export default function DogCreator(){
     const history = useHistory()
     const temperaments = useSelector(state => state.temperaments); //hook useSelector para traerme el estado del store
     const [error, setError] = useState({}) //hook useState para usar el estado de error, el cual es un objeto vacio
-
+    const [temps, setTemps] = useState([])
     const [form, setForm] = useState({ //hook usestate para usar los diferentes estados
         name: "",
         min_height: "",
@@ -87,10 +87,24 @@ export default function DogCreator(){
     }
 
     const handleSelect = (e) =>{
-        setForm({
-            ...form,
-            temperaments: [...form.temperaments, e.target.value] //agrego en un arreglo todo lo que vaya seleccionando
-        })
+        if(!temps.includes(e.target.value)){
+            if(temps.length > 0){
+                setTemps([...temps, e.target.value]) //me traigo todo lo que habia en mi estado local, y le agrego el nuevo valor
+                // setForm([
+                //     ...form,
+                //     temperaments: [...temperaments, e.target.value] //agrego en un arreglo todo lo que vaya seleccionando
+                // ])
+            }else{
+                setTemps([e.target.value])
+            }
+        }console.log(e.target.value)
+        
+    }
+
+    function handleDelete(el) { //creo la funcion para eliminar el temperamento
+        setTemps(
+            temps.filter(t => t !== el) //de mi estado me quedo con los temperamentos que sean diferentes al elemento
+        )
     }
 
     const handleSubmit = (e) =>{ //si el error no es diferente de undefined o el campo esta vacio
@@ -113,7 +127,7 @@ export default function DogCreator(){
             weight: form.min_weight + " - " + form.max_weight,
             life_span: form.life_span,
             image: form.image,
-            temperaments: form.temperaments
+            temperaments: temps
         }
 
         e.preventDefault();
@@ -129,15 +143,11 @@ export default function DogCreator(){
             image: "",
             temperaments: []
         })
+        setTemps([])
         history.push('/home') //me redirije a la ruta que yo elija
     }
 
-    const handleDelete = (el) => { //creo la funcion para eliminar el temperamento
-        setForm({ 
-            ...form,
-            temperaments: form.temperaments.filter(t => t !== el) //de mi estado me quedo con los temperamentos que sean diferentes al elemento
-        })
-    }
+    
 
     return(
         <div className={styles.container}>
@@ -267,14 +277,19 @@ export default function DogCreator(){
             
             
             {/* renderizo los temperamentos y hago que puedan eliminarlos */}
-            {form.temperaments.map(el => 
-                <div className={style.temperamtsAdd}>
-                    <div className={style.temperamentFlex}>
-                        <h2 className={style.elTemp}>{el}</h2>
-                        <button onClick={() => handleDelete(el)} className={style.buttonS}>X</button>
-                    </div>
-                    
-                </div>
+            {temps.map((el, id) => {
+                return(
+                    <React.Fragment key={id}>
+                        <div className={style.temperamtsAdd}>
+                            <div className={style.temperamentFlex}>
+                                <h2 className={style.elTemp}>{el}</h2>
+                                <button onClick={() => handleDelete(el)} className={style.buttonS}>X</button>
+                            </div>
+                        </div>
+                    </React.Fragment>
+                )
+            }
+                
             )}
         </div>
     )
