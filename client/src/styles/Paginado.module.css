@@ -1,0 +1,31 @@
+.paginado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1.5rem 0;
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.ulFlex{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+.buttonPag{
+    margin: 0 0.6rem;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.buttonPag:hover{
+    background-color: rgb(196, 196, 196);
+}

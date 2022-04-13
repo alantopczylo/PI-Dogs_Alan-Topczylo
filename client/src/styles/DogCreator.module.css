@@ -1,0 +1,118 @@
+.createTitle{
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.formCont{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.formBContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minContFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.minContFlex2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.inputTitle{
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    text-transform: uppercase;
+}
+
+.inputs{
+    height: 3rem;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.temperaments{
+    height: 3rem;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.temperamentsAdd{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.createB{
+    margin: 2rem 0;
+    width: 100%;
+    height: 5rem;
+}
+
+.createB:hover{
+    background-color: rgb(250, 250, 250);
+}
+
+.error{
+    color: red;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.temperamentFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem 0;
+}
+.elTemp{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 0 1rem;
+}
+
+.buttonS{
+    width: 5rem;
+    height: 3rem;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.goBack{
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    border-bottom: 1px solid black;
+}

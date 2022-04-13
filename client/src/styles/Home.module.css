@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    background-color: #fdfdfd;
+}
+
+.container{
+    margin: 2rem 2rem;
+    padding: 0 2rem;
+    
+    height: auto;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    padding: 0 0 2rem 0;
+}
+
+.logo{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+.breedCreator{
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.breedCreator:hover{
+    color: rgb(196, 196, 196);
+}
+
+.containerMenu{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.package{
+    display: flex;
+    align-items: center;
+}
+
+.flexContainer{
+    display: flex;
+    
+}
+
+.order{
+    margin: 0 2rem;
+    padding: 0 2rem;
+}
+
+.resetOrder{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.filterTitles{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: black;
+    margin: 1.5rem 0;
+}
+
+
+
+.filterBys{
+    margin: 0 1.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.resetLeft{
+    margin-left: 0;
+}
+
+.selects{
+    outline: none;
+    border: 2px solid rgb(196, 196, 196);
+    color: black;
+    background-color: rgb(250, 250, 250);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.searchButton{
+    cursor:text;
+}
+
+.search:hover{
+    background-color: rgb(196, 196, 196);
+}
+
+.search{
+    margin-left: 1rem;
+}
+
+.cardGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+.paginadoFlex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.reloadChar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingGif{
+    display: flex;
+    width: 97vw;
+    align-items: center;
+    justify-content: center;
+}
